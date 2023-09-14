@@ -94,4 +94,24 @@ The code LDANAiveBayesEM.ipynb cover various aspects of text data processing, cl
 8. **Conversion of LDA Topic Weights to DataFrames**: The LDA topic weights assigned to documents are transformed into DataFrames (`train_features_tfidf` and `test_features_tfidf`) to represent the topic features of the text data.
 
 
+Certainly, here's the summary of the code snippets along with the associated graphs:
+
+Data Preprocessing and Cleaning: Text data is preprocessed by removing punctuation, sentence tokenization, and lemmatization to obtain cleaner and more structured text data.
+
+Text Vectorization: The cleaned text data is converted into numerical features using the TF-IDF vectorization method, resulting in TF-IDF representations for both the training and test datasets.
+
+Data Splitting: The training data is divided into two sets: a labeled dataset (X_l_combined, y_l) and an unlabeled dataset (X_u_combined, y_u). This split is crucial for subsequent semi-supervised learning.
+
+Cross-Validation for Naive Bayes Classifier: Cross-validation is performed using labeled data with a traditional Multinomial Naive Bayes classifier (MultinomialNB). Various metrics such as accuracy, precision, recall, and F1-score are recorded for different quantities of labeled documents. A line plot and error bars are used to visualize the results.
+
+Cross-Validation for Semi-Supervised EM Naive Bayes Classifier: Similar to the previous step, cross-validation is conducted, but this time employing a semi-supervised EM-based Naive Bayes classifier (Semi_EM_MultinomialNB). This classifier utilizes both labeled and unlabeled data during training. Results are visualized with a line plot and error bars.
+
+Test Data Evaluation: The performance of both the traditional Naive Bayes classifier and the semi-supervised EM Naive Bayes classifier on the test data is assessed. Metrics like accuracy, precision, recall, and F1-score are calculated for different numbers of labeled documents. Line plots are used to visualize the changes in performance.
+
+Topic Modeling with LDA: Latent Dirichlet Allocation (LDA) topic modeling is applied to the text data, both in the training and test datasets. This produces topic weights as features.
+
+Conversion of LDA Topic Weights to DataFrames: The LDA topic weights assigned to documents are transformed into DataFrames (train_features_tfidf and test_features_tfidf) to represent the topic features of the text data.
+
+Additionally, there are various graphs for visualizing the results, including line plots showing changes in accuracy, precision, recall, F1-score, and more with varying quantities of labeled documents. Heatmaps are used to visualize confusion matrices, and there are graphs for topic modeling results as well.
+
 
