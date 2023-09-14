@@ -18,7 +18,7 @@ How LDA can relate to text classification:
 In practice, a common approach is to use LDA to generate topic-based features and then combine these features with other traditional text features (e.g., TF-IDF, word embeddings) for text classification tasks. The combination of these different features can often lead to improved classification performance.
 ## LDA without pipeline
 
-The code performs various text preprocessing and topic modeling tasks on a dataset using Python libraries like Gensim, spaCy, scikit-learn, and pyLDAvis. Here's a summary of the entire code:
+The code Latent_Dirichlet_Allocation.ipynb performs various text preprocessing and topic modeling tasks on a dataset using Python libraries like Gensim, spaCy, scikit-learn, and pyLDAvis. Here's a summary of the entire code:
 
 1. **Importing Libraries:** The code begins by importing necessary libraries, including Gensim, spaCy, scikit-learn, and pyLDAvis, for text processing, topic modeling, and visualization.
 
