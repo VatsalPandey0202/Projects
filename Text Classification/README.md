@@ -62,19 +62,14 @@ The code Latent_Dirichlet_Allocation.ipynb performs various text preprocessing a
 
 The file LDA_Pipeline.ipynb contains a comprehensive text analysis and classification pipeline that can be used for various natural language processing (NLP) tasks. The pipeline is built using Python and leverages popular libraries such as scikit-learn, Gensim, NLTK, and spaCy.
 
-1. **Data Loading and Preprocessing**: 
- - The code includes data loading and preprocessing steps to prepare text data for analysis. It demonstrates techniques for handling datasets and cleaning text data.
+1. **Data Loading and Preprocessing**: The code includes data loading and preprocessing steps to prepare text data for analysis. It demonstrates techniques for handling datasets and cleaning text data.
 
-2. **Topic Modeling with Latent Dirichlet Allocation (LDA)**: 
- - The repository provides a custom transformer class for fitting an LDA topic model to text data. It extracts meaningful topics from text documents.
+2. **Topic Modeling with Latent Dirichlet Allocation (LDA)**: The code provides a custom transformer class for fitting an LDA topic model to text data. It extracts meaningful topics from text documents.
 
-3. **Machine Learning Pipeline**: 
- - The code constructs a scikit-learn pipeline that automates the entire workflow, from data preprocessing to modeling. It includes custom transformers for text processing and classification models.
+3. **Machine Learning Pipeline**: The code constructs a scikit-learn pipeline that automates the entire workflow, from data preprocessing to modeling. It includes custom transformers for text processing and classification models.
 
-4. **Train-Test Split**: 
- - The repository demonstrates how to split the dataset into training and testing subsets while preserving class distribution. This is crucial for evaluating model performance.
+4. **Train-Test Split**: The code demonstrates how to split the dataset into training and testing subsets while preserving class distribution. This is crucial for evaluating model performance.
 
-5. **Model Training and Evaluation**: 
- - The pipeline trains a machine learning model (e.g., Support Vector Classifier, SVC) on the preprocessed text data and evaluates its performance using accuracy metrics.
+5. **Model Training and Evaluation**: The pipeline trains a machine learning model (e.g., Support Vector Classifier, SVC) on the preprocessed text data and evaluates its performance using accuracy metrics.
 
 
