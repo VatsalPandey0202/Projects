@@ -16,6 +16,8 @@ How LDA can relate to text classification:
 - **Understanding Text Content:** LDA can provide insights into the underlying themes or topics within your text corpus. This understanding can be valuable for feature engineering or for making informed decisions about how to structure your text classification problem.
 
 In practice, a common approach is to use LDA to generate topic-based features and then combine these features with other traditional text features (e.g., TF-IDF, word embeddings) for text classification tasks. The combination of these different features can often lead to improved classification performance.
+
+## All the code files were executed on Google Colab.
 ## LDA without pipeline
 
 The code Latent_Dirichlet_Allocation.ipynb performs various text preprocessing and topic modeling tasks on a dataset using Python libraries like Gensim, spaCy, scikit-learn, and pyLDAvis. Here's a summary of the entire code:
@@ -71,5 +73,25 @@ The file LDA_Pipeline.ipynb contains a comprehensive text analysis and classific
 4. **Train-Test Split**: The code demonstrates how to split the dataset into training and testing subsets while preserving class distribution. This is crucial for evaluating model performance.
 
 5. **Model Training and Evaluation**: The pipeline trains a machine learning model (e.g., Support Vector Classifier, SVC) on the preprocessed text data and evaluates its performance using accuracy metrics.
+
+## LDA with Semi Supervised Learning
+The code LDANAiveBayesEM.ipynb cover various aspects of text data processing, classification using Naive Bayes, and topic modeling using LDA. They also include cross-validation to assess model performance and evaluate the impact of the number of labeled documents on classification performance.
+
+1. **Data Preprocessing and Cleaning**: The code begins by preparing the text data, including removing punctuation, sentence tokenization, and lemmatization to obtain cleaner and more structured text data.
+
+2. **Text Vectorization**: The cleaned text data is converted into numerical features using the TF-IDF vectorization method, resulting in TF-IDF representations for both the training and test datasets.
+
+3. **Data Splitting**: The training data is divided into two sets: a labeled dataset (`X_l_combined`, `y_l`) and an unlabeled dataset (`X_u_combined`, `y_u`). This split is crucial for subsequent semi-supervised learning.
+
+4. **Cross-Validation for Naive Bayes Classifier**: Cross-validation is performed using labeled data with a traditional Multinomial Naive Bayes classifier (`MultinomialNB`). Various metrics such as accuracy, precision, recall, and F1-score are recorded for different quantities of labeled documents.
+
+5. **Cross-Validation for Semi-Supervised EM Naive Bayes Classifier**: Similar to the previous step, cross-validation is conducted, but this time employing a semi-supervised EM-based Naive Bayes classifier (`Semi_EM_MultinomialNB`). This classifier utilizes both labeled and unlabeled data during training.
+
+6. **Test Data Evaluation**: The performance of both the traditional Naive Bayes classifier and the semi-supervised EM Naive Bayes classifier on the test data is assessed. Metrics like accuracy, precision, recall, and F1-score are calculated for different numbers of labeled documents.
+
+7. **Topic Modeling with LDA**: Latent Dirichlet Allocation (LDA) topic modeling is applied to the text data, both in the training and test datasets. This produces topic weights as features.
+
+8. **Conversion of LDA Topic Weights to DataFrames**: The LDA topic weights assigned to documents are transformed into DataFrames (`train_features_tfidf` and `test_features_tfidf`) to represent the topic features of the text data.
+
 
 
