@@ -1,7 +1,4 @@
 # Sentiment Analysis
-Certainly, I'll provide a more concise explanation of sentiment analysis without bullet points or sections.
-
-**Sentiment Analysis**:
 
 Sentiment analysis, also known as opinion mining, is a natural language processing (NLP) technique that determines the emotional tone expressed in text data. Its main goal is to classify text as positive, negative, or neutral based on the sentiment it conveys.
 
@@ -22,6 +19,7 @@ Sentiment analysis finds applications in:
 Challenges include language nuances, context, and sarcasm. Various tools and libraries, like NLTK, TextBlob, and machine learning frameworks, aid in sentiment analysis by identifying sentiment in text data. It helps organizations understand public opinion and customer sentiment.
 
 ## EDA.ipynb
+
 This file contains a Python script for analyzing and visualizing social media data. The code is designed to work with a dataset, containing social media-related information, which is loaded from a CSV file named 'TheSocialDilemma.csv'.
 
 The code is organized into several parts, each serving a specific purpose:
