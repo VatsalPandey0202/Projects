@@ -1,3 +1,3 @@
-# SVG_LogoGenerator
+# LogoCreator
 
-A ML-based system for generative SVG logo design.
+A ML-based system for generative logo design.
