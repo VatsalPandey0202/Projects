@@ -49,3 +49,45 @@ The code is organized into several parts, each serving a specific purpose:
 6. **Final Output**: The resulting grouped data is printed to the console to provide users with a summary of the analysis. Additionally, the code sets a figure size, although it does not generate any additional plots in the provided code snippets.
 
 The code is designed to be informative and suitable for analyzing social media data. Users can adapt and extend it for their specific data analysis and visualization needs.
+
+## SentimentAnalysis.ipynb
+
+1. **Code for Loading Libraries and Data**:
+   - The code initializes various Python libraries for data manipulation, natural language processing, and machine learning.
+   - It loads a CSV file named 'TheSocialDilemma.csv' into a Pandas DataFrame called 'data' for further analysis.
+
+2. **Data Preprocessing**:
+   - Text data in the 'text' column of the 'data' DataFrame undergoes preprocessing steps, including lowercase conversion, URL removal, elimination of Twitter handles, punctuation removal, and cleaning of emails and extra whitespace.
+   - The cleaned text is stored back in the 'data' DataFrame for subsequent tasks.
+
+3. **Tokenization and Lemmatization**:
+   - Tokenization and lemmatization of the preprocessed text data are performed using the spaCy library.
+   - Stop words are eliminated, and lemmatization occurs for nouns, adjectives, verbs, and adverbs.
+   - The resulting tokenized and lemmatized text is saved in the 'data' DataFrame.
+
+4. **Creating a New DataFrame**:
+   - A new DataFrame ('df') is created, which includes the detokenized and lemmatized text ('tweet') and retains the 'Sentiment' column from the original data.
+
+5. **Data Splitting**:
+   - The 'df' DataFrame is split into training and testing sets by employing the `train_test_split` function.
+
+6. **Multinomial Naive Bayes Classifier Training**:
+   - Training of a Multinomial Naive Bayes classifier is executed on the TF-IDF transformed training data using the scikit-learn library.
+
+7. **Hyperparameter Tuning and Evaluation**:
+   - Hyperparameter tuning is conducted via Grid Search while evaluating the classifier's performance using metrics such as accuracy, precision, recall, F1-score, and the confusion matrix.
+
+8. **Feature Selection and Evaluation**:
+   - Feature selection is accomplished through the chi-squared (chi2) test to select the most informative features.
+   - Subsequently, a Multinomial Naive Bayes classifier is trained on the chosen features, and its performance is assessed using accuracy.
+
+9. **TF-IDF Vectorization and Dimension Reduction**:
+   - TF-IDF features are generated from the text data with the help of scikit-learn's `TfidfVectorizer`.
+   - Feature count is restricted to a maximum of 100,000, and the n-gram range is set to (1, 3).
+
+10. **Confusion Matrix Visualization**:
+    - Visualization of the Multinomial Naive Bayes classifier's confusion matrix is carried out to assess its performance on the test set. Two versions, normalized and unnormalized, are displayed.
+
+11. **Summary Plot**:
+    - A plot is created to compare the validation set accuracy of two distinct feature extraction methods: trigram TF-IDF vectorization and TF-IDF vectorization with dimensions reduced using chi-squared feature selection.
+    - The plot offers insights into the influence of feature count and feature selection on model performance.
