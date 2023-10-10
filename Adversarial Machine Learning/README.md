@@ -38,7 +38,14 @@ Here's an explanation of polynomial approximation of activation functions:
 
 5. **Polynomial Degree:** The degree of the polynomial determines how well it approximates the original activation function. Higher-degree polynomials can provide more accurate approximations but may also introduce more computational overhead. Researchers often experiment with different polynomial degrees to find an appropriate balance.
 
-6. **Example:** Consider the sigmoid activation function, which is defined as \(f(x) = \frac{1}{1 + e^{-x}}\). A simple polynomial approximation of sigmoid might be \(f(x) \approx \frac{1}{2} + \frac{1}{4}x - \frac{1}{48}x^3\). This polynomial retains the S-shaped curve of the sigmoid function while simplifying the computation.
+6. **Example:** Consider the sigmoid activation function, which is defined as:
+ ```latex
+f(x) = \frac{1}{1 + e^{-x}}
+ 
+A simple polynomial approximation of sigmoid might be:
+\tilde{f}(x) \approx \frac{1}{2} + \frac{1}{4}x - \frac{1}{48}x^3
+ ```
+This polynomial retains the S-shaped curve of the sigmoid function while simplifying the computation.
 
 7. **Trade-offs:** While polynomial approximation offers computational advantages, it may not capture all the nuances of the original activation function. There can be approximation errors, especially in the tails of the function. The choice of approximation degree and coefficients requires careful consideration.
 
