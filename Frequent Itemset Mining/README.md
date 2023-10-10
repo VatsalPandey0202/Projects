@@ -88,3 +88,23 @@ Association rules are a fundamental concept in data mining, particularly in the 
    - This measure takes into account both directions of the association, making it more balanced.
 
 These metrics help in evaluating the strength, significance, and characteristics of association rules discovered through frequent itemset mining. Analysts and data miners use these measures to identify interesting and actionable patterns in the data, which can be valuable for tasks such as product recommendations, market basket analysis, and more.
+
+# AFOPT
+The algorithm follows a two-step process to find frequent itemsets in a dataset. It's based on a depth-first search approach and involves scanning the dataset twice:
+
+1. **First Scan:** In the initial scan, the algorithm identifies all the items that occur frequently in the dataset. It then arranges these frequent items in ascending order based on how often they appear.
+
+2. **Second Scan:** In the second scan, the algorithm removes infrequent items from the dataset. It then constructs a prefix-tree data structure to represent a conditional database for the frequent items. This tree is built in a way that saves memory and construction costs, using arrays to store single branches.
+
+3. **Tree Structure:** Each node in the prefix-tree contains three pieces of information: item ID, the support of the itemset, and pointers to other nodes. The algorithm builds this tree to efficiently represent the conditional database.
+
+4. **Working Model:** Below firgure shows how the prefix-tree is created from a dataset with seven different transactions. The frequent items {c, e, f, d, m, a} are arranged in ascending order of their occurrence after the initial scan. 
+![AFOPT Tree Contruction](https://github.com/VatsalPandey0202/Projects/blob/main/Frequent%20Itemset%20Mining/CreateTree.png?raw=true)
+
+5. **Tree Construction:** The tree construction starts with the most frequent item, which in this case is {c}. As more transactions are read, the tree expands accordingly. For example, when transaction 2 is processed, it shares item c with transaction 1, so the tree node for item c has a support count of 2 and two children nodes, e and f.
+
+6. **Completing the Tree:** The same process is repeated for all transactions until the prefix-tree is fully constructed.
+
+7. **Mining Process:** After constructing the prefix-tree, the algorithm performs mining on the conditional database represented by the tree. It starts with the subtree rooted at item c, then moves on to the subtrees formed by joining items c and d, and so on. This process continues until all frequent itemsets are discovered.
+![Mining Tree](https://github.com/VatsalPandey0202/Projects/blob/main/Frequent%20Itemset%20Mining/MineTree.png?raw=true)
+
