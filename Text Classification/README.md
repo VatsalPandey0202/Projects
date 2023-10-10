@@ -114,4 +114,6 @@ Conversion of LDA Topic Weights to DataFrames: The LDA topic weights assigned to
 
 Additionally, there are various graphs for visualizing the results, including line plots showing changes in accuracy, precision, recall, F1-score, and more with varying quantities of labeled documents. Heatmaps are used to visualize confusion matrices, and there are graphs for topic modeling results as well.
 
+<object data="Poster.pdf" width="1000" height="1000" type='application/pdf'/>
+
 
